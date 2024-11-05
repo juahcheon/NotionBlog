@@ -1,4 +1,4 @@
-import posts from "content/posts"
+import posts from "../content/posts"
 
 export const baseUrl = 'https://nextjs-blog-template.pages.dev'
 
