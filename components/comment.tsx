@@ -5,10 +5,10 @@ export default function Comment() {
   return (
     <Giscus
       id='comments'
-      repo='notionpresso/NotionBlog'
-      repoId='R_kgDONDy8gg'
+      repo='juahcheon/NotionBlog'
+      repoId='R_kgDONKv4sw'
       category='Announcements'
-      categoryId='DIC_kwDONDy8gs4CjpSV'
+      categoryId='DIC_kwDONKv4s84CkGAa'
       mapping='pathname'
       strict='0'
       reactionsEnabled='1'
