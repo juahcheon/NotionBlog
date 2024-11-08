@@ -4,14 +4,13 @@ import posts from "../../../content/posts";
 import NotionRenderer from "../../../components/notion-renderer";
 import Comment from "../../../components/comment";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 // export async function generateStaticParams() {
 //   return posts.map((post) => ({ slug: post.slug }));
 // }
 
 export async function generateMetadata({ params }) {
-
   const { slug } = await params;
 
   const post = posts.find((post) => post.slug === slug);
