@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@giscus/react": "^3.0.0",
     "@next/font": "^14.2.15",
     "@notionpresso/cli": "^0.0.2",
     "@notionpresso/react": "^0.0.6",
