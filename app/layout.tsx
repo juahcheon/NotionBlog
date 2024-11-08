@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/profile.png",
+        url: "/profile.jpg",
         width: 800,
         height: 600,
         alt: "프로필 이미지",
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/profile.png"],
+    images: ["/profile.jpg"],
   },
   icons: {
-    icon: "/profile.png",
-    apple: "/profile.png",
+    icon: "/profile.jpg",
+    apple: "/profile.jpg",
   },
 };
 
