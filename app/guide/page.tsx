@@ -1,5 +1,5 @@
-import NotionRenderer from "components/notion-renderer";
-import guide from "content/guide";
+import NotionRenderer from "../../components/notion-renderer";
+import guide from "../../content/guide";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
