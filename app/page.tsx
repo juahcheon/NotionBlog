@@ -27,35 +27,43 @@ export default function Page() {
       <div className='my-8'>
         <BlogPosts />
       </div>
-      <section>
-        <div className="university">
-          <label>학력</label>
-          <p>창원대학교</p>
-          <p>국어국문학과, 2015 입학 - 2022 졸업</p>
+      <section className="mt-10">
+        <div className="university border-t mb-6 pb-4 pt-10 flex items-top">
+          <label className="font-semibold mr-6 pl-6 text-lg">학력</label>
+          <div>
+            <p>창원대학교</p>
+            <p className="mt-2">국어국문학과, 2015 입학 - 2022 졸업</p>
+          </div>
         </div>
-        <div className="programming">
-          <label>프로그래밍 역량</label>
-          <ul>
-            <li>
-              <label>FrontEnd</label>
-              <p>리액트의 Component와 Hook에 대해 완벽히 이해하고 있으며 응용</p>
-              <p>Next.JS의 다양한 라우터 방식을 이용한 컴포넌트 제작 및 TypeScript를 이용한 Type 지정</p>
-              <p>HTML/CSS/JavaScript로 원하는 페이지 제작이</p>
-              <p>Dothome, S3, Vercel 등 다양한 플랫폼을 이용한 웹사이트 제작</p>
-              <p>Figma 프로그램을 사용하여 디자인 및 프레젠테이션</p>
+        <div className="programming border-t mb-6 pb-8 pt-10">
+          <label className="font-bold mr-6 pl-6 text-lg">프로그래밍 역량</label>
+          <ul className="pl-6 mt-4">
+            <li className="flex mb-6">
+              <label className="mr-4 font-semibold">FrontEnd</label>
+              <div className="ml-14">
+                <p>리액트의 Component와 Hook에 대해 완벽히 이해하고 있으며 응용</p>
+                <p className="mt-1">Next.JS의 다양한 라우터 방식을 이용한 코드 작성 및 TypeScript를 이용한 Type 지정</p>
+                <p className="mt-1">HTML/CSS/JavaScript로 다양한 페이지 제작</p>
+                <p className="mt-1">Dothome, S3, Vercel 등 다양한 플랫폼을 이용한 웹사이트 제작</p>
+                <p className="mt-1">Figma 프로그램을 사용하여 디자인 및 프레젠테이션</p>
+              </div>
             </li>
-            <li>
-              <label>BackEnd</label>
-              <p>Spring Boot 툴을 이용해 JSP 파일 작성</p>
-              <p>JAVA 언어로 서버에 데이터를 보내고 받기</p>
-              <p>mySQL로 데이터 모델링</p>
-              <p>supabase, postman 등 다양한 프로그램으로 테이블 관리</p>
+            <li className="flex mb-6">
+              <label className="mr-4 font-semibold">BackEnd</label>
+              <div className="ml-14">
+                <p>Spring Boot 툴을 이용해 JSP 파일 작성</p>
+                <p className="mt-1">JAVA 언어로 서버에 데이터를 보내고 받기</p>
+                <p className="mt-1">mySQL로 데이터 모델링</p>
+                <p className="mt-1">supabase, postman 등 다양한 프로그램으로 테이블 관리</p>
+              </div>
             </li>
-            <li>
-              <label>Communication</label>
-              <p>Git Commit 및 Git Page 생성</p>
-              <p>Notion을 이용한 소통 가능</p>
-              <p>팀프로젝트를 통해 APi, EndPoint 등을 다뤄봄</p>
+            <li className="flex">
+              <label className="mr-4 font-semibold">Communication</label>
+              <div>
+                <p className="mt-1">Git Commit 및 Git Page 생성</p>
+                <p className="mt-1">Notion을 이용한 소통 가능</p>
+                <p className="mt-1">팀프로젝트를 통해 API, EndPoint 등을 다뤄봄</p>
+              </div>
             </li>
           </ul>
         </div>
