@@ -13,7 +13,8 @@ export default function Page() {
           className='rounded-full mr-4'
         />
         <h1 className='text-xl font-semibold tracking-tighter'>
-          안녕하세요, <br /> 저는 천주아입니다.
+          안녕하세요, <br /> 
+          저는 프론트엔드 엔지니어 천주아입니다.
         </h1>
       </div>
       <p className='mb-4 font-semibold tracking-tighter'>
@@ -67,11 +68,22 @@ export default function Page() {
             </li>
           </ul>
         </div>
-        <div className="study">
-          <label>외부 교육 과정</label>
-          <ul> [스마트웹&콘텐츠개발]풀스택 자바웹개발자
-            <li>- 교육 기관 : 이젠아카데미컴퓨터학원</li>
-            <li>- 교육 내용</li>
+        <div className="study border-t mb-6 pb-8 pt-10">
+          <label className="mr-4 font-semibold text-lg">외부 교육 과정</label>
+          <ul className="pl-6 mt-4"> <b>[스마트웹&콘텐츠개발]풀스택 자바웹개발자</b>
+            <li className="flex mt-4 mb-4">- 교육 기관 : 이젠아카데미컴퓨터학원</li>
+            <li className="mb-6">
+              - 교육 내용
+              <p className="mb-2 mt-2 ml-4">1. HTML, CSS의 웹 퍼블리싱</p>
+              <p className="mb-2 ml-4">2. Figma 프로그램 사용법</p>
+              <p className="mb-2 ml-4">3. Java Script 프로그래밍</p>
+              <p className="mb-2 ml-4">4. JAVA 객체지향 프로그래밍</p>
+              <p className="mb-2 ml-4">5. 리눅스 서버 시스템 구축</p>
+              <p className="mb-2 ml-4">6. 데이터베이스 SQL 활용</p>
+              <p className="mb-2 ml-4">7. JAVA Database 프로그래밍</p>
+              <p className="mb-2 ml-4">8. UI 구현</p>
+            </li>
+            <li className="flex mb-4">- 수행 프로젝트 : KINNI(미완성)</li>
           </ul>
         </div>
       </section>
