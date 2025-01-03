@@ -1,9 +1,9 @@
-import newPost from "../notion-data/9d9c8a62-a038-40f7-b76a-43d6ad636c33.json";
-import post1 from "../notion-data/9d9c8a62-a038-40f7-b76a-43d6ad636c33.json";
+import newPost from "../notion-data/170d49f4-a0a7-80cf-9931-df268eb324a3.json";
+import post1 from "../notion-data/170d49f4-a0a7-80cf-9931-df268eb324a3.json";
 
 const posts = [
   {
-    title: "첫 번째 블로그 포스트",
+    title: "DOM",
     slug: "first-post",
     content: newPost,
     date: "2024-11-05",
