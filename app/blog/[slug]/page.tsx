@@ -1,28 +1,33 @@
-import { notFound } from "next/navigation";
-import { baseUrl } from "../../../app/sitemap";
-import posts from "../../../content/posts";
-import NotionRenderer from "../../../components/notion-renderer";
-import Comment from "../../../components/comment";
+import { notFound } from 'next/navigation'
+import { baseUrl } from '@/app/sitemap'
+import posts from '@/content/posts'
+import NotionRenderer from '@/components/notion-renderer'
+import Comment from '@/components/comment'
 
-export const runtime = "nodejs";
+export const runtime = 'nodejs';
 
-// export async function generateStaticParams() {
-//   return posts.map((post) => ({ slug: post.slug }));
-// }
+interface Params {
+  slug: string;
+}
 
-export async function generateMetadata({ params }) {
-  const { slug } = await params;
+export async function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }))
+}
 
-  const post = posts.find((post) => post.slug === slug);
-
+export function generateMetadata({ params }:{ params: Params }) {
+  const post = posts.find((post) => post.slug === params.slug);
   if (!post) {
-    return;
+    return
   }
-
-  const { title, date: publishedTime, description, image } = post;
+  const {
+    title,
+    date: publishedTime,
+    description,
+    image,
+  } = post
   const ogImage = image
     ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -30,7 +35,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      type: "article",
+      type: 'article',
       publishedTime,
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
@@ -40,37 +45,30 @@ export async function generateMetadata({ params }) {
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [ogImage],
     },
-  };
+  }
 }
 
-export function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
-  if (!post) return <div>Post not found</div>;
-
-  return <NotionRenderer post={post} />;
-}
-
-export default async function Blog({ params }) {
-  const { slug } = await params;
-  let post = posts.find((post) => post.slug === slug);
+export default async function Blog({ params }:{ params: Params }) {
+  const { slug } = params;
+  const post = posts.find((post) => post.slug === slug)
   if (!post) {
-    notFound();
+    notFound()
   }
 
   return (
     <section>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
             headline: post.title,
             datePublished: post.date,
             dateModified: post.date,
@@ -80,8 +78,8 @@ export default async function Blog({ params }) {
               : `/og?title=${encodeURIComponent(post.title)}`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
-              "@type": "Person",
-              name: "My Portfolio",
+              '@type': 'Person',
+              name: 'My Portfolio',
             },
           }),
         }}
@@ -89,5 +87,5 @@ export default async function Blog({ params }) {
       <NotionRenderer post={post} />
       <Comment />
     </section>
-  );
+  )
 }
